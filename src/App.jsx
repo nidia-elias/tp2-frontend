@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
+import Home from './pages/Home';
+import Lourdes from './pages/Lourdes';
+import Maiten from './pages/Maiten';
+import Nidia from './pages/Nidia';
+
 
 function App() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>TP2 Front End</h1>
-      <p>Acá va a ir nuestro Dashboard con la Sidebar fija.</p>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="perfil/:id" element={<Profile />} />
+          <Route path="explorador" element={<DataExplorer />} />
+          <Route path="api" element={<ApiModule />} />
+          {/* ...otras rutas */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App

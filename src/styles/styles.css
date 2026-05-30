@@ -1,0 +1,15 @@
+:root {
+  --bg-dashboard: #0f172a;    /* Azul muy oscuro */
+  --bg-sidebar: #1e293b;      /* Azul grisáceo */
+  --accent-color: #38bdf8;    /* Celeste brillante */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --transition-smooth: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
