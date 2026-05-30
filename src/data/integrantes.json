@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lourdes",
+    "nombre": "Lourdes Millicay",
+    "habilidades": {"React": 90, "CSS": 85},
+    "proyectos": ["E-commerce", "App de clima"]
+  },
+  {
+    "id": "maiten",
+    "nombre": "Maiten Klaus",
+    "habilidades": {"React": 80, "JS": 95},
+    "proyectos": ["Dashboard", "Calculadora"]
+  },
+  {
+    "id": "nidia",
+    "nombre": "Nidia Elías",
+    "habilidades": {"React": 80, "JS": 95},
+    "proyectos": ["Dashboard", "Calculadora"]
+  }
+]

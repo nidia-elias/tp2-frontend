@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
 import Home from './pages/Home';
-import Lourdes from './pages/Lourdes';
-import Maiten from './pages/Maiten';
-import Nidia from './pages/Nidia';
+import Profile from './pages/Profile';
+import DataExplorer from './pages/DataExplorer';
+import ApiModule from './pages/ApiModule';
+import Galeria from './pages/Galeria';
+import Bitacora from './pages/Bitacora';
 
 
 function App() {
@@ -21,3 +23,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
