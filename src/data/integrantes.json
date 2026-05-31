@@ -1,20 +1,50 @@
 [
   {
+    "id": "nidia",
+    "nombre": "Nidia",
+    "ciudad": "Mar de Ajó",
+    "edad": "34 años",
+    "foto": "/img/grisino.jpg",
+    "habilidades": ["HTML", "CSS", "JavaScript", "Trabajo en equipo"],
+    "peliculas": ["Volver al futuro", "El origen", "Harry Potter"],
+    "discos": ["The Beatles-Revolver", "Soledad-Poncho al viento", "Paco de Lucía-Fuente y Caudal"],
+    "proyectos": [
+      { "titulo": "E-commerce Zen", "img": "/img/p1.jpg", "desc": "Tienda online con React" },
+      { "titulo": "App Clima", "img": "/img/p2.jpg", "desc": "Consulta de clima por ciudad" },
+      { "titulo": "Dashboard Pro", "img": "/img/p3.jpg", "desc": "Gestión de tareas" }
+    ]
+  },
+  {
     "id": "lourdes",
-    "nombre": "Lourdes Millicay",
-    "habilidades": {"React": 90, "CSS": 85},
-    "proyectos": ["E-commerce", "App de clima"]
+    "nombre": "Lourdes",
+    "ciudad": "Mar de Ajó",
+    "edad": "34 años",
+    "foto": "/img/grisino.jpg",
+    "habilidades": ["HTML", "CSS", "JavaScript", "Trabajo en equipo"],
+    "peliculas": ["Volver al futuro", "El origen", "Harry Potter"],
+    "discos": ["The Beatles-Revolver", "Soledad-Poncho al viento", "Paco de Lucía-Fuente y Caudal"],
+    "proyectos": [
+      { "titulo": "E-commerce Zen", "img": "/img/p1.jpg", "desc": "Tienda online con React" },
+      { "titulo": "App Clima", "img": "/img/p2.jpg", "desc": "Consulta de clima por ciudad" },
+      { "titulo": "Dashboard Pro", "img": "/img/p3.jpg", "desc": "Gestión de tareas" }
+    ]
   },
   {
     "id": "maiten",
-    "nombre": "Maiten Klaus",
-    "habilidades": {"React": 80, "JS": 95},
-    "proyectos": ["Dashboard", "Calculadora"]
-  },
-  {
-    "id": "nidia",
-    "nombre": "Nidia Elías",
-    "habilidades": {"React": 80, "JS": 95},
-    "proyectos": ["Dashboard", "Calculadora"]
+    "nombre": "Maitén",
+    "ciudad": "Mar de Ajó",
+    "edad": "34 años",
+    "foto": "/img/grisino.jpg",
+    "habilidades": ["HTML", "CSS", "JavaScript", "Trabajo en equipo"],
+    "peliculas": ["Volver al futuro", "El origen", "Harry Potter"],
+    "discos": ["The Beatles-Revolver", "Soledad-Poncho al viento", "Paco de Lucía-Fuente y Caudal"],
+    "proyectos": [
+      { "titulo": "E-commerce Zen", "img": "/img/p1.jpg", "desc": "Tienda online con React" },
+      { "titulo": "App Clima", "img": "/img/p2.jpg", "desc": "Consulta de clima por ciudad" },
+      { "titulo": "Dashboard Pro", "img": "/img/p3.jpg", "desc": "Gestión de tareas" }
+    ]
   }
+
+ 
+  
 ]
