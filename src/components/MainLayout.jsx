@@ -1,19 +1,25 @@
 
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
+import './MainLayout.css';
 
 const MainLayout = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', color: 'white', backgroundColor: '#1a1a1a' }}>
-      <aside style={{ width: '250px', borderRight: '1px solid gray', padding: '20px' }}>
+    <div className="dashboard-container">
+      
         <h2>Dashboard</h2>
         <nav>
-          {/* Aquí irán tus links más tarde */}
+          {/*  links */}
           <p>Menú de Navegación</p>
         </nav>
-      </aside>
-      <main style={{ flex: 1, padding: '20px' }}>
+     
+      <main className="main-content">
+        {/* agregar contenido
+        */}
         <Outlet /> 
       </main>
+      <footer className="footer-global">
+        <p>Equipo de Desarrollo - 2026</p>
+      </footer>
     </div>
   );
 };
