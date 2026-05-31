@@ -1,0 +1,207 @@
+/* ══════════════════════════════════════════
+   ApiPage.css
+══════════════════════════════════════════ */
+
+.api-page {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c3e50;
+}
+
+/*  ENCABEZADO  */
+.api-header {
+  margin-bottom: 2rem;
+}
+
+.api-titulo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.api-subtitulo {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+.api-subtitulo a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.api-subtitulo a:hover {
+  text-decoration: underline;
+}
+
+/*  ESTADOS: CARGANDO Y ERROR  */
+.api-estado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 4rem 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Spinner animado solo con CSS */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f8fafc;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+.api-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 3rem;
+  background: #fff5f5;
+  border: 1px solid #ffd0d0;
+  border-radius: 12px;
+  text-align: center;
+  color: #c0392b;
+  font-size: 0.95rem;
+}
+
+.error-icono {
+  font-size: 2rem;
+}
+
+.btn-reintentar {
+  margin-top: 4px;
+  padding: 8px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-reintentar:hover {
+  background: #3f37a0;
+}
+
+/*  LISTA DE POSTS  */
+.posts-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.post-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #e8e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 14px rgba(83, 74, 183, 0.08);
+}
+
+.post-numero {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #3498db;
+  background: #f8fafc;
+  padding: 3px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.post-contenido {
+  flex: 1;
+}
+
+.post-titulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #2c3e50;
+  text-transform: capitalize;
+}
+
+.post-cuerpo {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*  PAGINACIÓN  */
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pag-btn {
+  padding: 9px 20px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3498db;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.pag-btn:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #3498db;
+  transform: translateY(-1px);
+}
+
+/* Botón deshabilitado (primera/última página) */
+.pag-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pag-indicador {
+  font-size: 0.9rem;
+  color: #888;
+  min-width: 130px;
+  text-align: center;
+}
+
+.pag-indicador strong {
+  color: #2c3e50;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 500px) {
+  .paginacion {
+    gap: 10px;
+  }
+
+  .pag-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}

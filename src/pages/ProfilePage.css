@@ -1,0 +1,291 @@
+/* ══════════════════════════════════════════
+   ProfilePage.css
+   Importar en ProfilePage.jsx con:
+   import "./ProfilePage.css";
+══════════════════════════════════════════ */
+
+/*  PÁGINA GENERAL  */
+.profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c3e50;
+}
+
+/*  ENCABEZADO  */
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-nombre {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.profile-rol {
+  font-size: 1rem;
+  color: #3498db;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.profile-ubicacion {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+.profile-bio {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+/*  BOTONES DE REDES SOCIALES  */
+.social-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 8px 18px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #444;
+  background: white;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+/* El color de hover viene del JS como variable CSS */
+.social-btn:hover {
+  background: var(--hover-color);
+  color: white;
+  border-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/*  SECCIONES  */
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seccion {
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.seccion-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+/*  BARRAS DE HABILIDADES  */
+.skills-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-etiquetas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-nombre {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.skill-pct {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.skill-barra-fondo {
+  width: 100%;
+  height: 8px;
+  background: #f0effe;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.skill-barra-relleno {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #7f77dd);
+  border-radius: 99px;
+  /* ANIMACIÓN: la barra crece desde 0% hasta el valor real */
+  transition: width 1s ease-in-out;
+}
+
+/*  TECH STACK  */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px;
+  border: 1.5px solid #e8e8f0;
+  border-radius: 12px;
+  background: white;
+  cursor: default;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  min-width: 80px;
+}
+
+.tech-card:hover {
+  border-color: #3498db;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(83, 74, 183, 0.15);
+}
+
+.tech-icono {
+  font-size: 1.8rem;
+}
+
+.tech-nombre {
+  font-size: 0.78rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/*  CARRUSEL  */
+.carrusel {
+  border: 1px solid #e8e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carrusel-slide {
+  padding: 1.5rem;
+  min-height: 120px;
+}
+
+.proyecto-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #3498db;
+}
+
+.proyecto-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.proyecto-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.proyecto-tag {
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  background: #f8fafc;
+  color: #3498db;
+  border-radius: 99px;
+  font-weight: 500;
+}
+
+.carrusel-controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 1.5rem;
+  border-top: 1px solid #e8e8f0;
+  background: #fafafa;
+}
+
+.carrusel-btn {
+  background: none;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: #3498db;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.carrusel-btn:hover {
+  background: #f8fafc;
+  border-color: #3498db;
+}
+
+.carrusel-indicador {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-btns {
+    justify-content: center;
+  }
+}
