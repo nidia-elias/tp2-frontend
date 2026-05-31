@@ -27,9 +27,9 @@ export default function ProfilePage() {
   }
 
 const siguienteSlide = () =>
-  setSlideActivo((prev) => (prev + 1) % perfil.peliculas.length);
+  setSlideActivo((prev) => (prev + 1) % perfil.proyectos.length);
 const anteriorSlide = () =>
-  setSlideActivo((prev) => (prev - 1 + perfil.peliculas.length) % perfil.peliculas.length);
+  setSlideActivo((prev) => (prev - 1 + perfil.proyectos.length) % perfil.proyectos.length);
 
   return (
     <div className="profile-page">
@@ -95,20 +95,20 @@ const anteriorSlide = () =>
           </div>
         </section>
 
-        {/*  CARRUSEL DE PELICULAS  */}
+        {/*  CARRUSEL DE PROYECTOS  */}
         <section className="seccion">
           <h2 className="seccion-titulo">🎬 Películas Favoritas</h2>
           <div className="carrusel">
             <div className="carrusel-slide">
-              <h3 className="peliculas-titulo">
-                {perfil.peliculas[slideActivo].titulo}
+              <h3 className="proyectos-titulo">
+                {perfil.proyectos[slideActivo].titulo}
               </h3>
-              <p className="peliculas-desc">
-                {perfil.peliculas[slideActivo].descripcion}
+              <p className="proyectos-desc">
+                {perfil.proyectos[slideActivo].descripcion}
               </p>
-              <div className="peliculas-tags">
-                {perfil.peliculas[slideActivo].tecnologias.map((t) => (
-                  <span key={t} className="peliculas-tag">{t}</span>
+              <div className="proyectos-tags">
+                {perfil.proyectos[slideActivo].tecnologias.map((t) => (
+                  <span key={t} className="proyectos-tag">{t}</span>
                 ))}
               </div>
             </div>
@@ -116,7 +116,7 @@ const anteriorSlide = () =>
             <div className="carrusel-controles">
               <button className="carrusel-btn" onClick={anteriorSlide}>← Anterior</button>
               <span className="carrusel-indicador">
-                {slideActivo + 1} / {perfil.peliculas.length}
+                {slideActivo + 1} / {perfil.proyectos.length}
               </span>
               <button className="carrusel-btn" onClick={siguienteSlide}>Siguiente →</button>
             </div>

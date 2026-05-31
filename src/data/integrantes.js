@@ -29,11 +29,23 @@ export const integrantes = [
       { nombre: "GitHub",   url: "https://github.com/",   color: "#24292e" },
       { nombre: "LinkedIn", url: "https://linkedin.com/", color: "#0077b5" },
     ],
-    peliculas: [
-      { titulo: "Mamma mia",     genero: "Musical", anio: 2008 },
-      { titulo: "Thor: Ragnarok",       genero: "Superhéroes",           anio: 2017 },
-      { titulo: "Life of Pi",    genero: "Drama, aventura",       anio: 2012 },
-    ],
+    proyectos: [
+  {
+    titulo: "E-commerce React",
+    descripcion: "Tienda online con carrito de compras y filtros por categoría.",
+    tecnologias: ["React", "CSS", "JavaScript"],
+  },
+  {
+    titulo: "Weather App",
+    descripcion: "Aplicación de clima en tiempo real usando la API de Open-Meteo.",
+    tecnologias: ["React", "API REST"],
+  },
+  {
+    titulo: "Portafolio Personal",
+    descripcion: "Sitio personal con animaciones y diseño responsive.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+  },
+],
   },
   {
     id: "maiten",
@@ -60,11 +72,23 @@ export const integrantes = [
       { nombre: "GitHub",   url: "https://github.com/MaiKlaus",   color: "#24292e" },
       { nombre: "LinkedIn", url: "https://linkedin.com/", color: "#0077b5" },
     ],
-    peliculas: [
-      { titulo: "Shrek",     genero: "Animación", anio: 2001 },
-      { titulo: "Las locuras del emperador",       genero: "Animación",           anio: 2000 },
-      { titulo: "Elementos",    genero: "Animación",       anio: 2023 },
-    ],
+    proyectos: [
+  {
+    titulo: "REST API",
+    descripcion: "API con autenticación JWT y base de datos MongoDB.",
+    tecnologias: ["Node.js", "Express", "MongoDB"],
+  },
+  {
+    titulo: "Blog Fullstack",
+    descripcion: "Blog completo con panel de administración.",
+    tecnologias: ["React", "Node.js", "CSS"],
+  },
+  {
+    titulo: "Chat en Tiempo Real",
+    descripcion: "Aplicación de mensajería usando WebSockets.",
+    tecnologias: ["Node.js", "Socket.io"],
+  },
+],
   },
   {
     id: "nidia",
@@ -91,10 +115,22 @@ export const integrantes = [
       { nombre: "GitHub",   url: "https://github.com/nidia-elias",   color: "#24292e" },
       { nombre: "LinkedIn", url: "https://linkedin.com/", color: "#0077b5" },
     ],
-    peliculas: [
-      { titulo: "Volver al futuro",     genero: "Ciencia ficción", anio: 1985 },
-      { titulo: "El origen",       genero: "Drama",           anio: 2010 },
-      { titulo: "Harry Potter",    genero: "Animación",       anio: 2001 },
-    ],
+    proyectos: [
+  {
+    titulo: "App de Turnos",
+    descripcion: "Sistema de gestión de turnos con calendario interactivo.",
+    tecnologias: ["Figma", "React", "CSS"],
+  },
+  {
+    titulo: "Landing Page",
+    descripcion: "Landing animada para una startup de tecnología.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    titulo: "Design System",
+    descripcion: "Sistema de componentes reutilizables para equipos de diseño.",
+    tecnologias: ["Figma", "CSS"],
+  },
+],
   },
 ];
