@@ -1,0 +1,250 @@
+.galeria-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c3e50;
+}
+
+/*  ENCABEZADO  */
+.galeria-header {
+  margin-bottom: 1.5rem;
+}
+
+.galeria-titulo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.galeria-subtitulo {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+/*  FILTROS  */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-btn {
+  padding: 7px 16px;
+  border: 1.5px solid #e0e0f0;
+  border-radius: 99px;
+  background: white;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filtro-btn:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.filtro-btn.activo {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/*  GRID DE IMÁGENES  */
+.imagen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.imagen-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0f0f0;
+}
+
+.imagen-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.imagen-item:hover img {
+  transform: scale(1.07);
+}
+
+/* Overlay que aparece al hacer hover */
+.imagen-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  padding: 20px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.imagen-item:hover .imagen-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.imagen-titulo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.imagen-categoria {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/*  LIGHTBOX  */
+
+/* Fondo oscuro que cubre toda la pantalla */
+.lightbox {
+  position: fixed;
+  inset: 0;                /* top/right/bottom/left = 0 */
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-contenido {
+  position: relative;
+  max-width: 860px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Imagen grande dentro del lightbox */
+.lightbox-imagen {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  animation: zoomIn 0.2s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.94); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+/* Botón cerrar (X) */
+.lightbox-cerrar {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.lightbox-cerrar:hover {
+  background: #f0effe;
+  transform: scale(1.1);
+}
+
+/* Botones de navegación (‹ ›) */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 10;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-anterior { left: -60px; }
+.lightbox-siguiente { right: -60px; }
+
+/* Info: título y contador */
+.lightbox-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 4px;
+}
+
+.lightbox-titulo {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+}
+
+.lightbox-contador {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 650px) {
+  .imagen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lightbox-anterior { left: 4px; }
+  .lightbox-siguiente { right: 4px; }
+}
+
+@media (max-width: 400px) {
+  .imagen-grid {
+    grid-template-columns: 1fr;
+  }
+}
